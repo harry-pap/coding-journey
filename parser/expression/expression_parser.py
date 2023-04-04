@@ -1,14 +1,14 @@
 import re
 
-from parser.cell import Cell
-from parser.cell_processor import CellStorage
-from parser.funtion import SquareFunction, SumFunction, UppercaseFunction, TextFunction, BiggerThanOrEqualToFunction, \
-    ConcatFunction, SplitFunction, SpreadFunction, IncrementFromFunction
-from parser.node import Node, Link
-from parser.numeric_operation import Addition, Subtraction, Multiplication, Division
-from parser.raw_value_matcher import RawNumberMatcher, RawStringMatcher
-from parser.value_referrence import SpecificCellMatcher, LastComputedInColumnMatcher, LastCellInColumnMatcher, \
-    NamedCellMatcher, SpecialCopyMatcher
+from parser.cell.cell import Cell
+from parser.cell.cell_processor import CellStorage
+from parser.expression.funtion import SquareFunction, SumFunction, UppercaseFunction, TextFunction, \
+    BiggerThanOrEqualToFunction, ConcatFunction, SplitFunction, SpreadFunction, IncrementFromFunction
+from parser.expression.node import Node, Link
+from parser.expression.numeric_operation import Addition, Subtraction, Multiplication, Division
+from parser.reference.raw_value_matcher import RawNumberMatcher, RawStringMatcher
+from parser.reference.value_referrence import SpecificCellMatcher, LastComputedInColumnMatcher, \
+    LastCellInColumnMatcher, NamedCellMatcher, SpecialCopyMatcher
 
 
 class MainLoopContinue(Exception):

@@ -1,6 +1,6 @@
 import unittest
 
-from parser.cell import Cell
+from parser.cell.cell import Cell
 
 
 class CellTest(unittest.TestCase):

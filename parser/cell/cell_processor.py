@@ -1,4 +1,4 @@
-from parser.cell import Cell
+from parser.cell.cell import Cell
 
 
 class CellProcessor:

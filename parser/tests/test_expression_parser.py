@@ -1,12 +1,13 @@
 import unittest
+from decimal import Decimal
+
 from parameterized import parameterized
 
-from parser.expression_parser import default_expression_parser
-from parser.expression_parser import validate_parentheses_in_expression
-from parser.cell_processor import CellStorage
-from parser.cell import Cell
-from decimal import Decimal
-from parser.node import Node
+from parser.cell.cell import Cell
+from parser.cell.cell_processor import CellStorage
+from parser.expression.expression_parser import default_expression_parser
+from parser.expression.expression_parser import validate_parentheses_in_expression
+from parser.expression.node import Node
 
 
 class ExpressionParserTest(unittest.TestCase):

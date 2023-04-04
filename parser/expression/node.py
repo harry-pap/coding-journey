@@ -1,12 +1,12 @@
 from decimal import Decimal
 from io import StringIO
 
-from parser.cell import Cell
-from parser.cell_processor import CellStorage
-from parser.cell_referrence import CellReferencingNode
-from parser.funtion import Function
-from parser.funtion import IncrementFromFunction
-from parser.numeric_operation import Operation
+from parser.cell.cell import Cell
+from parser.cell.cell_processor import CellStorage
+from parser.expression.funtion import Function
+from parser.expression.funtion import IncrementFromFunction
+from parser.expression.numeric_operation import Operation
+from parser.reference.cell_referrence import CellReferencingNode
 
 
 class Link:

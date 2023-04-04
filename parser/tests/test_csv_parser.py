@@ -1,9 +1,9 @@
 import unittest
-
-from parser.cell_processor import CellProcessor
-from parser.csvparser import CSVParser
-from parser.expression_parser import default_expression_parser
 from pathlib import Path
+
+from parser.cell.cell_processor import CellProcessor
+from parser.csvparser import CSVParser
+from parser.expression.expression_parser import default_expression_parser
 
 
 class CSVParserTest(unittest.TestCase):

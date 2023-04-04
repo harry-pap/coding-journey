@@ -1,10 +1,10 @@
 import copy
 import re
 
-from parser.cell import Cell
-from parser.cell_processor import CellStorage
-from parser.cell_referrence import LastComputedCellInColumnReferencingNode, LastCellInColumnReferencingNode
-from parser.node import Node
+from parser.cell.cell import Cell
+from parser.cell.cell_processor import CellStorage
+from parser.expression.node import Node
+from parser.reference.cell_referrence import LastComputedCellInColumnReferencingNode, LastCellInColumnReferencingNode
 
 
 class CellMatcher:

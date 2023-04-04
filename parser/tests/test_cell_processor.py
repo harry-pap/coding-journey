@@ -1,8 +1,8 @@
 import unittest
 
-from parser.cell import Cell
-from parser.cell_processor import CellProcessor
-from parser.expression_parser import default_expression_parser
+from parser.cell.cell import Cell
+from parser.cell.cell_processor import CellProcessor
+from parser.expression.expression_parser import default_expression_parser
 
 
 class CellProcessorTest(unittest.TestCase):

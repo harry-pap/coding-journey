@@ -1,9 +1,35 @@
-Implementation of the spreadsheets challenge
+# About
 
-## Stack
+Implementation of an interesting spreadsheets challenge. Part of the challenge was to implement it in a language that
+I don't have much experience with.
 
-The solution was implemented in python. While I have worked with python before, it was in the context
-of scripting its use was very limited(many years ago as well), this assignment is by far the most complicated task I have ever implemented in this language. 
+
+## Problem Statement
+You're given a CSV file, titled `transactions.csv`. 
+
+- The delimiter is the pipe operator `|`
+- Named columns have an exclamation mark prefix `!`
+- Named columns appear anywhere in the file as long as they maintain the same column count
+- Cells can have equations prefixed with `=`
+
+The goal is to take `transactions.csv` and compute what needs to be computed producing a file
+that contains all the static values + all the equations resolved.
+
+**Operations & Equations**
+Any computable expression in the CSV must be prefixed with `=`. The expression
+language is very similar to excel formulas, it supports basic arithmetic expressions
+as well as function calls that provide additional features like comparisons,
+string concatenations and other useful utility functions.
+
+**Operations**
+
+- `^^` Copies the formula from the cell above in the same column, with some special evaluation rules
+- `(A..Z)n` references a cell by a combination of a column-letter+row-number. Ex: A2 B3
+- `A^` copies the evaluated result of the cell above in the same column
+- `!label` Columns can have labels, which allows this ability to have different column groups in the same file as long as the number of columns stays consistent
+- `A^v` copies the evaluated result of the last cell in the specified column from the most recently available column group that has data in that specified column
+- `@label<n>` References a specific labeled column and a specific row `n` under that column relative to where the column was labeled. This is a reference operator with relative row traversal
+
 
 ## Running
 You need the latest python 3.9.6+(earlier versions of python 3 might work as well) in your path as well as pip.
@@ -115,3 +141,6 @@ are gathered in a single list and submitted to the function
 For relative operators link `A^`, a special `CellReferencingNode` is added in the tree. When the tree is traversed the
 value of the node is instantiated and computed. 
 
+### Known issues
+For the sake of a fast solution a circular dependency was introduced between cell_reference.py and node.py, and in the 
+solution is not polished in general, as it's meant to be a challenge and not production code.
